@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chat — Campus Buddy</title>
+
+  <!-- external stylesheet with cache-buster -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/chat_ui.css') }}?v=1">
+
+  <!-- React (UMD) -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Babel for JSX in-browser (dev only) -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- load the React component (JSX transformed by Babel) -->
+  <script type="text/babel" src="{{ url_for('static', filename='js/chat_ui.jsx') }}"></script>
+</body>
+</html>

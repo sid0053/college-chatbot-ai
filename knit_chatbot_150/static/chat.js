@@ -1,0 +1,1 @@
+async function send(){let q=document.getElementById('q').value;let r=await fetch('/api/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({query:q})});let d=await r.json();document.getElementById('chat').innerHTML+='<p>You: '+q+'</p><p>Bot: '+d.answer+'</p>';}
